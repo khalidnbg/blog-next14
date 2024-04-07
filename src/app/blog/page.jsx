@@ -1,5 +1,6 @@
 import PostCard from "@/components/postCard/postCard";
 import styles from "./blog.module.css";
+import { getPosts } from "@/lib/data";
 
 // FETCH DATA WITH API
 // const getData = async () => {
@@ -11,7 +12,11 @@ import styles from "./blog.module.css";
 // };
 
 const BlogPage = async () => {
-  const posts = await getData();
+  // FETCH DATA WITH API
+  // const posts = await getData();
+
+  // FETCH DATA WITHOUT API
+  const posts = await getPosts();
 
   return (
     <div className={styles.container}>
